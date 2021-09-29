@@ -23,16 +23,16 @@ export default function createMenu() {
   if (loggedIn) {
     authLink = `<li><a href="add.html" aria-label="add product" class="nav-link ${
       pathname === "/add.html" ? "active" : ""
-    }"><i class="fas fa-plus text-white fs-2"></i></a></li>
+    }"><i class="fas fa-plus text-white"></i></a></li>
     <span aria-label="logged in user" class="text-lowercase text-white p-2">${username}</span>
     <button id="logout" aria-label="sign out" class="btn p-1"><i class="fas fa-sign-out-alt text-white"></i></button>`;
   }
   const container = document.querySelector(".menu-container");
 
-  container.innerHTML = `<ul class="menu nav navbar-nav ml-auto">
-                        <li><a href="cart.html" aria-label="shoppingcart" class="nav-link fs-2 ${
+  container.innerHTML = `<ul class="menu nav navbar-nav ms-auto mt-2">
+                        <li><a href="cart.html" aria-label="shoppingcart" class="position-relative nav-link ${
                           pathname === "/cart.html" ? "active" : ""
-                        }"><i class="text-white fas fa-shopping-cart"></i><span id="cart-counter" aria-label="count of items in cart" class="badge text-white rounded-pill bg-primary align-top">${cartCount}</span></a></li>
+                        }"><i class="text-white fas fa-shopping-cart "></i><span id="cart-counter" aria-label="count of items in cart" class="badge rounded-circle bg-primary text-white">${cartCount}</span></a></li>
                         ${authLink}
                         </ul>
                         `;
