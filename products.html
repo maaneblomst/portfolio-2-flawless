@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tonje Holm">
+    <meta name="description" content="Find your Flawless routine in our online store.">
+    <meta name="keywords"
+        content="skincare, hydrate, moisturize, serum, dermatology, beauty, flawless, inspiration, sale, online">
+    <title>Products – Flawless Skincare</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <h1 class="d-none">Welcome to Flawless Cosmetics</h1>
+        <nav class="menu-container navbar navbar-expand navbar-dark bg-dark sticky-top"></nav>
+        <nav class="navbar navbar-expand-lg navbar-light mx-auto" style="background-color: #fff;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/flawless-logo-trans.png" style="width: 150px"
+                        alt="The pink Flawless logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto text-uppercase">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="products-hero-image">
+        </div>
+        <div class="wrapper">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb text-uppercase bg-white">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Products</li>
+                </ol>
+            </nav>
+            <div class="search-field ml-3 mb-3">
+                <i class="fas fa-search pr-2"></i><input type="text" id="search-products"
+                    placeholder="Search products..">
+            </div>
+            <div class="message-container"></div>
+            <div class="product-container card-deck">
+                <div class="d-flex justify-content-center loader">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="container-fluid">
+            <div class="row bg-primary p-0">
+                <div class="col m-0 p-0">
+                    <img src="images/flawless_shoppingbag2.png" class="p-0"
+                        alt="woman hands holding a jar of Flawless product">
+                </div>
+                <div class="col m-0 p-0">
+                    <div class="p-5">
+                        <h2 class="text-white p-1 m-3">Buying a gift?</h2>
+                        <p class="text-white p-1 m-3">We offer digital giftcards to easily buy a gift for someone you
+                            care about – wether it's you or someone else. Give the gift of choice – it's perfect for any
+                            occation. The giftcard will be delivered instantly by e-mail.
+                        </p>
+                        <a class="btn btn-light text-primary font-weight-bold p-2 m-4" href="products.html">
+                            Buy a giftcard</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-fluid bg-dark text-center">
+            <a class="navbar-brand" href="index.html"><img src="images/footer_logo.png" style="width: 100px"
+                    alt="the pink Flawless logo">
+            </a>
+        </div>
+    </footer>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="js/products.js" type="module"></script>
+</body>
+
+</html>

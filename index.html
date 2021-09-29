@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tonje Holm">
+    <meta name="description"
+        content="We believe all skin is beautiful. Find your Flawless skin routine in our online store.">
+    <meta name="keywords" content="skincare, hydrate, moisturize, serum, dermatology, beauty, flawless, inspiration">
+    <title>Home – Flawless Skincare</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <h1 class="d-none">Welcome to Flawless Cosmetics</h1>
+        <nav class="menu-container navbar navbar-expand navbar-dark bg-dark sticky-top"></nav>
+        <nav class="navbar navbar-expand-lg navbar-light mx-auto" style="background-color: #fff;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/flawless-logo-trans.png" style="width: 150px"
+                        alt="The pink Flawless logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto text-uppercase">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="home-hero-image">
+                <div class="container pt-5">
+                    <h2 class="display-3 text-white mb-2">Treat your skin</h2>
+                    <p class="lead p-2 text-white" style="max-width: 400px">
+                        Browse our selection of revitalizing and enhancing skincare products.
+                    </p>
+                    <a href="products.html" class="btn btn-light btn-lg text-primary">Shop now</a>
+                </div>
+            </div>
+        </section>
+        <section class="wrapper">
+            <h2>Featured products</h2>
+            <div class="message-container"></div>
+            <div id="home-featured-list" class="product-container card-deck">
+                <div class=" d-flex justify-content-center loader">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row p-0">
+                <div class="col-md-12 col-lg-6 m-0 p-0">
+                    <img src="images/home-ad.jpg" class="p-0 img-fluid"
+                        alt="woman hands holding a jar of Flawless product">
+                </div>
+                <div class="col m-0 p-0 bg-primary
+                ">
+                    <div class="p-5">
+                        <h3 class="text-white m-3">Cleanse – Tone – Moisturize</h3>
+                        <p class="text-white m-3">
+                            At Flawless skincare, we know all about the search for the perfect
+                            skincare routine. Flawless products are developed by dermatologists who are experienced in
+                            all skin types. Our mission is to help target specific skin concerns and revitalize our
+                            customers skin.
+                        </p>
+                        <a class="btn btn-light text-primary font-weight-bold m-2" href="#">
+                            Read more about it</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-5 col-sm-12 ml-5 mt-5">
+                    <div class="p-5 ml-5">
+                        <h3 class="display-5">Subscribe to our news.</h3>
+                        <p class="text-muted">We promise we won't spam you.</p>
+                        <form action="#" class="ml-1">
+                            <div class="input-group d-md-block">
+                                <input class="pl-2 mb-2" name="subscribe" id="subscribe" type="email"
+                                    placeholder="Your e-mail" required>
+                                <button class="btn btn-primary ml-2" type="submit">
+                                    Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <img src="images/new-product-ad.jpg" class="img-fluid"
+                        alt="a product image of a Flawless skincare tube with leaves around it">
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="container-fluid bg-dark text-center">
+            <a class="navbar-brand" href="index.html"><img src="images/footer_logo.png" style="width: 100px"
+                    alt="the pink Flawless logo">
+            </a>
+        </div>
+    </footer>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>

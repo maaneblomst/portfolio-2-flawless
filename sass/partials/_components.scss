@@ -1,0 +1,30 @@
+.card-options,
+.detail-options {
+  font-size: 1.2em;
+}
+
+.home-hero-image {
+  background-image: url("https://ihasbucket1.s3.eu-north-1.amazonaws.com/hero_banner_d76e361b18.jpg");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.products-hero-image {
+  background-image: url("https://ihasbucket1.s3.eu-north-1.amazonaws.com/products_hero_4x_584454da27.png");
+  height: 350px;
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.newsletter {
+  background-image: url("https://ihasbucket1.s3.eu-north-1.amazonaws.com/home_news_bg_4cf5990072.png");
+  height: 350px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

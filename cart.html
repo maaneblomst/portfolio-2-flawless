@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tonje Holm">
+    <meta name="description" content="A Flawless shoppingcart. Buy your Flawless skincare products today.">
+    <meta name="keywords" content="skincare, hydrate, moisturize, serum, dermatology, beauty, flawless, inspiration">
+    <title>Shopping Cart – Flawless Skincare</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <header>
+        <h1 class="d-none">Welcome to Flawless Cosmetics</h1>
+        <nav class="menu-container navbar navbar-expand navbar-dark bg-dark sticky-top"></nav>
+        <nav class="navbar navbar-expand-lg navbar-light mx-auto" style="background-color: #fff;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/flawless-logo-trans.png" style="width: 150px"
+                        alt="The pink Flawless logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto text-uppercase">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb text-uppercase bg-white">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+            </ol>
+        </nav>
+        <div class="wrapper">
+            <h2>Shopping Cart</h2>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+                    <div class="message-container"></div>
+                    <ul id="cart-items-list" class="list-group">
+                    </ul>
+                    <button type="button" id="clear-all" class="btn btn-danger mt-4">Clear my shopping cart</button>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 mt-3">
+                    <img src="images/flawless_shoppingbag2.png" class="img-fluid"
+                        alt="a picture of two white Flawless shoppingbags" />
+                    <div class="cart-total h5">
+                        Total: $ 0
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid bg-dark text-center">
+            <a class="navbar-brand" href="index.html"><img src="images/footer_logo.png" style="width: 100px"
+                    alt="the pink Flawless logo">
+            </a>
+        </div>
+    </footer>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./js/cart.js" type="module"></script>
+</body>
+
+</html>

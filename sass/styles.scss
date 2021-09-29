@@ -1,0 +1,27 @@
+//Colours
+$primary-colour: #c44f4f;
+$secondary-colour: #767676;
+$font-colour: #0a0a0a;
+$white: #ffffff;
+$light: #ffffff;
+$dark: #000000;
+$custom-control-indicator-focus-border-color: $primary-colour;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary": $primary-colour,
+    "secondary": $secondary-colour,
+    "dark": $dark,
+  ),
+  $theme-colors
+);
+
+//Fonts
+$font-family-base: "Lato", sans-serif;
+$headings-font-family: "Playfair Display", serif;
+
+@import "../bootstrap/scss/bootstrap.scss";
+@import "./partials/base.scss";
+@import "./partials/components.scss";
+@import "./partials/layout.scss";
