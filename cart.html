@@ -22,7 +22,7 @@
     <header>
         <h1 class="d-none">Welcome to Flawless Cosmetics</h1>
         <nav class="menu-container navbar navbar-expand navbar-dark bg-dark sticky-top"></nav>
-        <nav class="navbar navbar-expand-lg navbar-light mx-auto" style="background-color: #fff;">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"><img src="images/flawless-logo-trans.png" style="width: 150px"
                         alt="The pink Flawless logo"></a>
@@ -32,7 +32,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto text-uppercase">
+                    <ul class="navbar-nav ms-auto text-uppercase">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
@@ -50,31 +50,29 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="wrapper">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb text-uppercase bg-white">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html" class="link-primary">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
             </ol>
         </nav>
-        <div class="wrapper">
-            <h2>Shopping Cart</h2>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-                    <div class="message-container"></div>
-                    <ul id="cart-items-list" class="list-group">
-                    </ul>
-                    <button type="button" id="clear-all" class="btn btn-danger mt-4">Clear my shopping cart</button>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 mt-3">
-                    <img src="images/flawless_shoppingbag2.png" class="img-fluid"
-                        alt="a picture of two white Flawless shoppingbags" />
-                    <div class="cart-total h5">
-                        Total: $ 0
-                    </div>
-                </div>
-
+        <h2>Shopping Cart</h2>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+                <div class="message-container"></div>
+                <ul id="cart-items-list" class="list-group">
+                </ul>
+                <button type="button" id="clear-all" class="btn btn-danger mt-4">Clear my shopping cart</button>
             </div>
+            <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 mt-3">
+                <img src="images/flawless_shoppingbag2.png" class="img-fluid"
+                    alt="a picture of two white Flawless shoppingbags" />
+                <div class="cart-total h5">
+                    Total: $ 0
+                </div>
+            </div>
+
         </div>
     </main>
     <footer>
