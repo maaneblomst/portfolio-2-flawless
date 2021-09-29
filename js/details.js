@@ -1,7 +1,11 @@
 import displayMessage from "./components/displayMessage.js";
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./components/createMenu.js";
-import { getExistingCartItems, getQuantity } from "./utils/cartFunctions.js";
+import {
+  getExistingCartItems,
+  getQuantity,
+  calculateCartTotal,
+} from "./utils/cartFunctions.js";
 import checkLogin from "./utils/checkLogin.js";
 import {
   listenForClicks,
@@ -72,12 +76,16 @@ const productUrl = baseUrl + "/products/" + id;
                               ${quantityElement}
                               <i class="fas ${cssClass} text-dark" style="cursor:pointer" aria-label="add/remove product from cart" data-id="${id}" data-name="${name}" data-price="${price}" data-quantity="${quantity}" data-image="${thumbnail}"></i>
                               ${editElement}
+                              <div class="cart-total h5">
+                              Total: $ 0
+                              </div>
                               </div>
                             </div>
                             </div>`;
 
     listenForClicks();
     listenForQuantityChange(details.id);
+    calculateCartTotal();
   } catch (error) {
     displayMessage("alert-danger", error, ".message-container");
   }

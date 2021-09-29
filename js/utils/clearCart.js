@@ -1,6 +1,8 @@
 import { cartKey, removeItem } from "./storage.js";
 import displayMessage from "../components/displayMessage.js";
 import { displayCartItems } from "../cart.js";
+import { calculateCartTotal } from "./cartFunctions.js";
+import createMenu from "../components/createMenu.js";
 
 //Clear all items in the shoppingcart
 let container = document.querySelector("#cart-items-list");
@@ -26,6 +28,8 @@ function clearCart() {
       "Your cart was successfully emptied",
       ".message-container"
     );
+    displayCartItems();
+    window.location.reload();
   } else {
     container.innerHTML = "";
     displayCartItems();

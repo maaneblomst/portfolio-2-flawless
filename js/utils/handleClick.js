@@ -3,7 +3,7 @@ import {
   saveCartItems,
   getExistingCartItems,
   updateQuantity,
-  calculateItemsInCart,
+  calculateCartTotal,
 } from "./cartFunctions.js";
 
 //Listen for clicks
@@ -22,6 +22,8 @@ export function listenForQuantityChange() {
       "change",
       function handleQuantityChange(event) {
         updateQuantity(event.target.dataset.id, event.target.value);
+        calculateCartTotal();
+        createMenu();
       }
     );
   }

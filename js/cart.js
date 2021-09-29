@@ -32,7 +32,7 @@ export function displayCartItems() {
     let quantityElement = "";
     quantityElement += `<input type="number" class="quantity" data-quantity="${quantity}" data-id="${cartItem.id}" min="1" max="100" placeholder="1" value=${quantity}>`;
     container.innerHTML += `<li class="list-group-item cart-item" data-id="${cartItem.id}" data-name="${cartItem.name}" data-price="${cartItem.price}">
-                            <a href="details.html?id=${cartItem.id}">
+                            <a href="details.html?id=${cartItem.id}" class="text-decoration-none link-dark">
                             ${cartItem.name}
                             <img src="${cartItem.image}" class="img-fluid d-block"></a>
                             <span class="text-dark d-block">Price: ${cartItem.price}</span>
