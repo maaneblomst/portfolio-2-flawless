@@ -21,7 +21,6 @@ $theme-colors: map-merge(
 $font-family-base: "Lato", sans-serif;
 $headings-font-family: "Playfair Display", serif;
 
-@import "../bootstrap/scss/bootstrap.scss";
 @import "./partials/base.scss";
 @import "./partials/components.scss";
 @import "./partials/layout.scss";

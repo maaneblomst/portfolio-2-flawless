@@ -1,7 +1,9 @@
+import createMenu from "../components/createMenu.js";
 import {
   saveCartItems,
   getExistingCartItems,
   updateQuantity,
+  calculateItemsInCart,
 } from "./cartFunctions.js";
 
 //Listen for clicks
@@ -55,10 +57,14 @@ function handleClick() {
     };
     currentCartItems.push(item);
     saveCartItems(currentCartItems);
+    // Update indicator on shoppingcart
+    createMenu();
   } else {
     let newCartItems = currentCartItems.filter(
       (cartItem) => cartItem.id !== id
     );
     saveCartItems(newCartItems);
+    // Update indicator on shoppingcart
+    createMenu();
   }
 }
