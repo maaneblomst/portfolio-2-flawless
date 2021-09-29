@@ -64,21 +64,21 @@ const productUrl = baseUrl + "/products/" + id;
     <i class="fas fa-edit pl-1"></i></a>`
       : "";
 
-    container.innerHTML = `<div class="row">
-                            <div class="col-lg-6 col-md-9 col-sm-9 col-xs-12">
+    container.innerHTML = `<div class="row row-cols-1 row-cols-md-2">
+                            <div class="col">
                               <img src="${image}" class="img-fluid" alt="product image of ${name}">
                             </div>
-                            <div class="col-lg-6 col-md-9 col-sm-9 col-xs-12">
+                            <div class="col">
                               <h3>${name}</h3>
                               <span>Price: ${price}</span>
                               <p class="muted-text">${description}</p>
-                              <div class="detail-options">
-                              ${quantityElement}
-                              <i class="fas ${cssClass} text-dark" style="cursor:pointer" aria-label="add/remove product from cart" data-id="${id}" data-name="${name}" data-price="${price}" data-quantity="${quantity}" data-image="${thumbnail}"></i>
-                              ${editElement}
+                                <div class="detail-options">
+                                ${quantityElement}
+                                <i class="fas ${cssClass} text-dark" style="cursor:pointer" aria-label="add/remove product from cart" data-id="${id}" data-name="${name}" data-price="${price}" data-quantity="${quantity}" data-image="${thumbnail}"></i>
+                                ${editElement}
+                                </div>
                               <div class="cart-total h5">
-                              Total: $ 0
-                              </div>
+                              Cart total: $ 0
                               </div>
                             </div>
                             </div>`;

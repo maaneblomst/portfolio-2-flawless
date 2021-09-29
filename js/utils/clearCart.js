@@ -28,8 +28,8 @@ function clearCart() {
       "Your cart was successfully emptied",
       ".message-container"
     );
-    displayCartItems();
     window.location.reload();
+    displayCartItems();
   } else {
     container.innerHTML = "";
     displayCartItems();

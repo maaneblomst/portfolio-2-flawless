@@ -1,7 +1,11 @@
 import { cartKey, saveToStorage } from "./storage.js";
 import displayMessage from "../components/displayMessage.js";
-import { getExistingCartItems } from "../utils/cartFunctions.js";
+import {
+  calculateCartTotal,
+  getExistingCartItems,
+} from "../utils/cartFunctions.js";
 import { displayCartItems } from "../cart.js";
+import createMenu from "../components/createMenu.js";
 
 //Remove item from the shoppingcart
 
@@ -31,6 +35,8 @@ function removeCartItem() {
     currentCartItems = updatedCartItems;
     saveToStorage(cartKey, updatedCartItems);
     displayCartItems();
+    calculateCartTotal();
+    createMenu();
     displayMessage(
       "alert-success",
       "The item was successfully removed.",
