@@ -1,6 +1,7 @@
 import { baseUrl } from "../settings/api.js";
 import { getToken } from "../utils/storage.js";
 import checkLogin from "../utils/checkLogin.js";
+import { updateQuantity } from "../utils/cartFunctions.js";
 
 //Only display this option if the user is logged in. Run the checkLogin function.
 const token = getToken();
@@ -40,7 +41,9 @@ export default function deleteButton(id) {
         const json = await response.json();
 
         location.href = "https://holmcreations.com/semesterproject2";
-      } catch (error) {}
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 }
