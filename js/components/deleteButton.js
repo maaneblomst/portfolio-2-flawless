@@ -1,7 +1,8 @@
 import { baseUrl } from "../settings/api.js";
 import { getToken } from "../utils/storage.js";
 import checkLogin from "../utils/checkLogin.js";
-import { updateQuantity } from "../utils/cartFunctions.js";
+import { getExistingCartItems, saveCartItems } from "../utils/cartFunctions.js";
+import createMenu from "./createMenu.js";
 
 //Only display this option if the user is logged in. Run the checkLogin function.
 const token = getToken();
@@ -15,14 +16,14 @@ if (!checkLogin) {
 //If the product is not deleted, display an error message to the user.
 export default function deleteButton(id) {
   const container = document.querySelector(".delete-container");
-
+  console.log(id);
   container.innerHTML = `<button type="button" class="btn btn-secondary delete mt-2"><i class="fas fa-trash"></i> Delete
     product</button>`;
 
   const button = document.querySelector("button.delete");
 
   button.onclick = async function () {
-    const doDelete = confirm("Are you sure you want to delete this?");
+    const doDelete = confirm("Are you sure you want to delete this product?");
 
     if (doDelete) {
       const url = baseUrl + "/products/" + id;
@@ -35,12 +36,25 @@ export default function deleteButton(id) {
           Authorization: `Bearer ${token}`,
         },
       };
+      //Work in progress. Trying to get current cartitems, check if product id exists there,
+      //then filter it out, and create a new array for the shopping cart. Not working well so far.
+      let currentCartItems = getExistingCartItems();
 
+      let itemExistsInCart = currentCartItems.find(function (cartItem) {
+        return cartItem.id === id;
+      });
+      console.log("this item exists in the cart" + itemExistsInCart);
+
+      let newCartItems = currentCartItems.filter(
+        (cartItem) => cartItem.id !== id
+      );
+      saveCartItems(newCartItems);
+      createMenu();
       try {
         const response = await fetch(url, options);
         const json = await response.json();
 
-        location.href = "https://holmcreations.com/semesterproject2";
+        location.href = "#";
       } catch (error) {
         console.log(error);
       }

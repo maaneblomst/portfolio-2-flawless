@@ -24,10 +24,18 @@ function submitLogin(event) {
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
 
-  if (usernameValue.length === 0 || passwordValue.length === 0) {
+  if (usernameValue.length === 0) {
+    displayMessage(
+      "alter-warning",
+      "Please enter a username",
+      ".message-container"
+    );
+  }
+
+  if (passwordValue.length === 0) {
     return displayMessage(
       "alert-warning",
-      "Invalid values",
+      "Please enter a password",
       ".message-container"
     );
   }
@@ -53,6 +61,7 @@ async function runLogin(username, password) {
   try {
     const response = await fetch(url, options);
     const json = await response.json();
+    console.log(response);
 
     if (json.user) {
       saveToken(json.jwt);
@@ -62,7 +71,12 @@ async function runLogin(username, password) {
     }
 
     if (json.error) {
-      displayMessage("alert-warning", "Invalid details", ".message-container");
+      console.log(error);
+      displayMessage(
+        "alert-warning",
+        "We're so sorry. Try another username or password",
+        ".message-container"
+      );
     }
   } catch (error) {}
 }
