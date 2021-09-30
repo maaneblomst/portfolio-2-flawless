@@ -3,9 +3,12 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  margin: 0 auto;
+}
 .wrapper {
-  margin: 1em;
-  padding: 1em;
+  margin: 20px;
+  padding: 50px;
 }
 
 $card-height: 100%;

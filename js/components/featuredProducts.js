@@ -19,7 +19,7 @@ export function displayFeaturedProducts(featuredProductToDisplay) {
                                   <div class="card product mb-3 mt-2">
                                     <a href="details.html?id=${featuredProduct.id}"><img src="${featuredProduct.images.url}" class="card-img-top" alt="product image of ${featuredProduct.name}" /></a>
                                       <div class="card-body">
-                                        <span>$ ${featuredProduct.price}</span>
+                                      <span class="fs-5 fw-bold">${featuredProduct.price} $</span>
                                         <a href="details.html?id=${featuredProduct.id}" class="text-decoration-none" aria-label="click to view product"><h5 class="card-title text-dark">${featuredProduct.name}</h5></a>
                                     </div>
                                 </div>

@@ -38,8 +38,8 @@ export function displayCartItems() {
                             <span class="text-dark d-block">Price: ${cartItem.price}</span>
                             <span class="text-dark d-block">Quantity:${quantityElement}</span>
                             <a href="details.html?id=${cartItem.id}"">
-                            <button class="btn btn-primary mt-2">View product</button></a>
-                            <button id="remove-item" data-id="${cartItem.id}" class="btn btn-secondary mt-2">Remove</button>
+                            <button class="btn btn-light mt-2 me-2"><i class="fas fa-eye me-1"></i>View product</button></a>
+                            <button id="remove-item" data-id="${cartItem.id}" class="btn btn-secondary mt-2 me-2"><i class="fas fa-trash-alt me-1"></i>Remove</button>
                           </li>`;
     listenForRemoval();
     listenForClearing();

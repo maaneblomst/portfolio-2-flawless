@@ -34,7 +34,7 @@ export function displayProducts(productsToDisplay) {
                       <div class="card mb-3 mt-1">
                       <a href="details.html?id=${product.id}" class="link-primary"aria-label="view product">
                       <img src="${image}" class="card-img-top" alt="product image of ${name}"></a>
-                      <span class="pl-3">${price} $</span>
+                      <span class="ps-3 fs-5 fw-bold">${price} $</span>
                         <div class="card-body">
                         <a href="details.html?id=${product.id}" class="text-decoration-none" aria-label="view product"><h5 class="card-title text-dark">${name}</h5></a>
                             <div class="card-options">
