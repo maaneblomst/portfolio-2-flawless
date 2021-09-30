@@ -79,15 +79,35 @@ function submitForm(event) {
   const uploadedImage = imageUpload.files[0];
   const idValue = idInput.value;
 
-  if (
-    nameValue.length === 0 ||
-    priceValue.length === 0 ||
-    isNaN(priceValue) ||
-    descriptionValue.length === 0
-  ) {
+  //Form validation messages
+  if (nameValue.length === 0) {
     return displayMessage(
       "alert-warning",
-      "Please fill in the missing values/blank fields.",
+      "Please fill in the name of the product",
+      ".message-container"
+    );
+  }
+
+  if (priceValue === 0) {
+    return displayMessage(
+      "alert-warning",
+      "Please fill in a valid price",
+      ".message-container"
+    );
+  }
+
+  if (isNaN(priceValue)) {
+    return displayMessage(
+      "alert-warning",
+      "Please enter a price for the product",
+      ".message-container"
+    );
+  }
+
+  if (descriptionValue.length === 0) {
+    return displayMessage(
+      "alert-warning",
+      "Please fill in a longer description of the product",
       ".message-container"
     );
   }
@@ -115,7 +135,10 @@ async function updateProduct(name, price, description, featured, id) {
     description: description,
     featured: featured,
   };
-  formData.append("files.images", file, file.name);
+
+  if (file) {
+    formData.append("files.images", file, file.name);
+  }
   formData.append("data", JSON.stringify(data));
 
   const options = {
@@ -133,9 +156,12 @@ async function updateProduct(name, price, description, featured, id) {
     if (json.updated_at) {
       displayMessage(
         "alert-success",
-        "Hurray! Product updated.",
+        "Hurray! Product updated. Reloading form..",
         ".message-container"
       );
+      setTimeout(function () {
+        location.reload();
+      }, 3000);
     }
     if (json.error) {
       displayMessage(

@@ -38,16 +38,43 @@ function submitForm(event) {
   const featuredValue = featured.checked;
   const uploadedImage = imageUpload.files[0];
 
-  if (
-    nameValue.length === 0 ||
-    priceValue.length === 0 ||
-    isNaN(priceValue) ||
-    descriptionValue.length === 0 ||
-    uploadedImage.length === 0
-  ) {
+  //Form validation messages
+  if (nameValue.length === 0) {
     return displayMessage(
       "alert-warning",
-      "Please fill in the missing values.",
+      "Please fill in the name of the product",
+      ".message-container"
+    );
+  }
+
+  if (priceValue === 0) {
+    return displayMessage(
+      "alert-warning",
+      "Please fill in a valid price",
+      ".message-container"
+    );
+  }
+
+  if (isNaN(priceValue)) {
+    return displayMessage(
+      "alert-warning",
+      "Please enter a price for the product",
+      ".message-container"
+    );
+  }
+
+  if (descriptionValue.length === 0) {
+    return displayMessage(
+      "alert-warning",
+      "Please fill in a longer description of the product",
+      ".message-container"
+    );
+  }
+
+  if (!uploadedImage) {
+    return displayMessage(
+      "alert-warning",
+      "Please upload an image for the product",
       ".message-container"
     );
   }
@@ -75,7 +102,9 @@ async function addProduct(name, price, description, featured) {
     featured: featured,
   };
 
-  formData.append("files.images", file, file.name);
+  if (file) {
+    formData.append("files.images", file, file.name);
+  }
   formData.append("data", JSON.stringify(data));
 
   const options = {
