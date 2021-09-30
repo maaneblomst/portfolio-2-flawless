@@ -48,32 +48,35 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="wrapper">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb text-uppercase bg-white">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html" class="link-primary">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Login</li>
             </ol>
         </nav>
-        <div class="wrapper row justify-content-center">
-            <form id="login-form" class="card p-4 ">
-                <h1>Login</h1>
-                <div class="message-container"></div>
-                <div class="mb-3">
-                    <label for="username" class="col-form-label">
-                        <input class="form-control-lg" name="username" id="username" placeholder="Username" />
-                    </label>
-                </div>
+        <div class="row justify-content-center">
+            <div class="col"></div>
+            <div class="col">
+                <form id="login-form" class="card p-4">
+                    <h1>Login</h1>
+                    <div class="message-container"></div>
+                    <div class="mb-3">
+                        <label for="username" class="col-form-label">
+                            <input class="form-control-lg" name="username" id="username" placeholder="Username" />
+                        </label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-form-label">
+                            <input class="form-control-lg" type="password" name="password" id="password"
+                                placeholder="Password" />
+                        </label>
+                    </div>
 
-                <div class="mb-3">
-                    <label for="password" class="col-form-label">
-                        <input class="form-control-lg" type="password" name="password" id="password"
-                            placeholder="Password" />
-                    </label>
-                </div>
-
-                <button class="btn btn-primary mt-2">Login <i class="fas fa-user"></i></button>
-            </form>
+                    <button type="submit" class="btn btn-primary mt-2">Login <i class="fas fa-user"></i></button>
+                </form>
+            </div>
+            <div class="col"></div>
         </div>
     </main>
     <footer>
